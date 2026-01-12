@@ -1,0 +1,136 @@
+body{
+    font-family : "VT323", monospace;
+    font-size: 20px;
+    margin: 20px;
+    font-weight: lighter;
+    text-align: center;
+   }
+
+   header, footer {
+    color: var(--headcolor);
+    padding: 10px;
+  }
+  header  h1 {
+    text-shadow: 2px 2px grey;
+    margin-top: 0px;
+  }
+  header img {
+    float:left;
+    margin-right: 5px;
+  }
+
+   body{
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to top, #243330, #5D9582,  #C5EA8C, #E8E7A2);
+    background-size: 300% 300%;
+    animation: gradient 5s ease infinite; 
+   }
+
+
+   nav {
+    margin: 0;
+  }
+  .navbar {
+    overflow: hidden;
+    background-color:  var(--headcolor);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation links */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The subnavigation menu */
+  .subnav {
+    float: left;
+    overflow: hidden;
+    background-color:  var(--headcolor);
+    margin: 0;
+  }
+  
+  /* Subnav button */
+  .subnav .subnavbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color:  var(--headcolor);
+    font-family: inherit;
+  
+  }
+  
+  /* Add a red background color to navigation links on hover */
+  .navbar a:hover, .subnav:hover .subnavbtn {
+     color: yellow;
+  }
+  
+  /* Style the subnav content - positioned absolute */
+  .subnav-content {
+    display: none;
+    position: absolute;
+    left: 10px;
+    background-color:  var(--headcolor);
+    width: 100%;
+    z-index: 1;
+    padding-right: 0;
+  }
+  
+  /* Style the subnav links */
+  .subnav-content a {
+    float: left;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Add a grey background color on hover */
+  .subnav-content a:hover {
+    background-color: yellow;
+    color: black;
+  }
+  
+  /* When you move the mouse over the subnav container, open the subnav content */
+  .subnav:hover .subnav-content {
+    display: block;
+  }
+
+  section {
+    color: var(--fontcolor);
+    width: 60%;
+    margin: 5% auto;
+    border: 2px solid grey;
+    padding: 10px;
+    background:var(--bgcolor);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black
+  }
+ 
+
+   @keyframes gradient{
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes neonText{
+    from {
+    text-shadow: 0 0 5px #E8E7A2, 0 0 10px #E8E7A2,  0 0 20px #E8E7A2, 0 0 40px #5D9582, 0 0 80px #5D9582;
+    }
+    to {
+    text-shadow:0 0 15px #E8E7A2, 0 0 20px #E8E7A2,  0 0 30px #5D9582, 0 0 50px #5D9582,  0 0 90px #5D9582;
+    }
+}
