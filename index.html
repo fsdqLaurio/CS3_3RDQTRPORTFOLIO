@@ -17,88 +17,84 @@
 
         <style>
 
-           body{
-            font-family : "VT323", monospace;
-            font-size: 20px;
-            margin: 20px;
-            font-weight: lighter;
-            text-align: center;
-           }
-
-           body{
-            margin: 0;
-            height: 100vh;
-            background: linear-gradient(to top, #243330, #5D9582,  #C5EA8C, #E8E7A2);
-            background-size: 300% 300%;
-            animation: gradient 5s ease infinite; 
-           }
-
-           .neonText{
-            font-size: 50px;
-            font-weight: bold;
-            animation: neonText 2s ease-in-out infinite alternate;
-    
-           }
-
-           .button{
-            font-family : "VT323", monospace;
-            font-size: 16x;
-            padding: 10px 20px;
-            border:none;
-            background-color: #BAD5AC;
-            box-shadow:0 5px #243330;
-            border-radius: 8px;
-            cursor: pointer;
-            margin: 10px;
-            animation: button 0.3s ease-in-out;
-           }
-
-              button:hover {
-                    background-color: #3BAEBE;
-                    transition:background-color 0.3s ease;
-              }
-
-           @keyframes gradient{
-            0% {
-                background-position: 0% 50%
+            body{
+             font-family : "VT323", monospace;
+             font-size: 20px;
+             margin: 20px;
+             font-weight: lighter;
+             text-align: center;
             }
-            50% {
-                background-position: 100% 50%
+ 
+            body{
+             margin: 0;
+             height: 100vh;
+             background: linear-gradient(to top, #243330, #5D9582,  #C5EA8C, #E8E7A2);
+             background-size: 300% 300%;
+             animation: gradient 5s ease infinite; 
             }
-            100% {
-                background-position: 0% 50%
+ 
+            .neonText{
+             font-size: 50px;
+             font-weight: bold;
+             animation: neonText 2s ease-in-out infinite alternate;
+     
             }
-        }
-
-        @keyframes neonText{
-            from {
-            text-shadow: 0 0 5px #E8E7A2, 0 0 10px #E8E7A2,  0 0 20px #E8E7A2, 0 0 40px #5D9582, 0 0 80px #5D9582;
+ 
+            .button{
+             font-family : "VT323", monospace;
+             font-size: 16x;
+             padding: 10px 20px;
+             border:none;
+             background-color: #BAD5AC;
+             box-shadow:0 5px #243330;
+             border-radius: 8px;
+             cursor: pointer;
+             margin: 10px;
+             animation: button 0.3s ease-in-out;
             }
-            to {
-            text-shadow:0 0 15px #E8E7A2, 0 0 20px #E8E7A2,  0 0 30px #5D9582, 0 0 50px #5D9582,  0 0 90px #5D9582;
-            }
-        }
-
-        </style>
-
+ 
+               button:hover {
+                     background-color: #3BAEBE;
+                     transition:background-color 0.3s ease;
+               }
+ 
+            @keyframes gradient{
+             0% {
+                 background-position: 0% 50%
+             }
+             50% {
+                 background-position: 100% 50%
+             }
+             100% {
+                 background-position: 0% 50%
+             }
+         }
+ 
+         @keyframes neonText{
+             from {
+             text-shadow: 0 0 5px #E8E7A2, 0 0 10px #E8E7A2,  0 0 20px #E8E7A2, 0 0 40px #5D9582, 0 0 80px #5D9582;
+             }
+             to {
+             text-shadow:0 0 15px #E8E7A2, 0 0 20px #E8E7A2,  0 0 30px #5D9582, 0 0 50px #5D9582,  0 0 90px #5D9582;
+             }
+         }
+ 
+         </style>
+ 
     </head>
     <body>
         <header>
             <div>
             <h1 style="color: #5D9582;" class ='neonText'>Welcome to my Portfolio!</h1>
             </div>
-        <nav>
-             <a href="./public/Unique_IceCream_Flavors.html" class="button"> First Graded Exercise </a>
-             <a href ="./public/Q21NGBerylliumLaurio.html" class="button">First Non-Graded</a>
-        </nav>
              <nav class="navbar">
                 <a href="#home">Home</a>
                 <div class="subnav">
                     <button class="subnavbtn">2nd Qtr <i class="fa fa-caret-down"></i></button>
                     <div class="subnav-content">
                         <!-- practice exercises for arrays -->
-                        <a href="./public/Unique_IceCream_Flavors.html" class="button"> First Graded Exercise </a>
-                        <a href ="./public/Q21NGBerylliumLaurio.html" class="button">First Non-Graded</a>
+                        <a href="./public/Unique_IceCream_Flavors.html" target="_blank">> First Graded Exercise </a>
+                        <a href ="./public/Q21NGBerylliumLaurio.html" target="_blank">First Non-Graded</a>
                        </div>
                 </div>
                 <div class="subnav">
