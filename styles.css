@@ -33,7 +33,7 @@ body{
   }
   .navbar {
     overflow: hidden;
-    background-color:  var(--headcolor);
+    background-color: rgb(238, 221, 224);
     margin: 0;
     padding: 0;
   }
