@@ -1,82 +1,46 @@
-<DOCTYPE html>
+<!DOCTYPE html>
+<html>
     <head>
-
+        <title>View Sign Ups</title>
+        <link rel="stylesheet" href="q3ge2.css">
     </head>
 
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+
     <body>
-        <table>
-            <th></th>
-            <td></td>
-        </table>
+        <table></table>
 
         <section>
             <h1>List of students who signed up</h1>
 
              <label>Select your club</label>
                 <select id ="clubFilter" name="clubFilter" >
-                <option value="" disabled selected> All Clubs</option>
+                <option value="all">All clubs</option>
                 <option value="scischo">The Science Scholar</option>
                 <option value="lagab">Ang Lagablab</option>
                 <option value="kandili">Kandili</option>
                 <option value="mun">PSHS-MC Model United Nations</option>
                 <option value="ellipsis">Ellipsis</option>
-            </select><br/><br/>
+            </select>
+
+            <p id = "total"></p>
+
+            <button onclick="window.location.href='Q3_2GBerylliumLaurio.html'">Back to Sign-ups</button>
 
         </section>
+
+        <script src="viewSignUpsscr.js" defer></script>
     </body>
-
-    <script>
-    
-    function readLocalStorage(){
-        let acctString = localStorage.getItem("accounts");
-        if (!acctString) { 
-            accountList = {};
-        }
-
-        else {
-            accountList = JSON.parse(acctString);
-        }
-
-        return accountList; 
-    }
-
-        const table = document.querySelector('table');
-        const filter = document.getElementById('clubFilter');
-
-        function resetTable(table){
-            table.innerHTML = '';
-        }
-
-        function populateTable(){ 
-            resetTable(table);
-
-            const headerRow = document.createElement('tr');
-            const headers = ['Student ID', 'Full Name', 'Birthday', 'Email', 'Mobile Phone', 'Grade Level', 'Residence Type', 'Organization', 'Why Join'];
-            headers.forEach(headerText => {
-                const th = document.createElement('th');
-                th.textContent = headerText;
-                headerRow.appendChild(th);
-            });
-
-            table.appendChild(headerRow);
-
-            // populated table w data
-            let accountList = readLocalStorage();
-            for(let account in accountList){ // executes each entry (account) in accountList
-                if (filter.value && accountList[account]['cluborg'] !== filter.value) {
-                    continue; // skip account if it doesn't match the filter but only if filter is selected
-                }
-                const row = document.createElement('tr'); // for each account; 
-                for(let entry in accountList[account]){ // for each entry in account
-                    const td = document.createElement('td'); 
-                    td.textContent = accountList[account][entry]; 
-                    row.appendChild(td);
-                }
-                table.appendChild(row); // appends each account
-            }
-        
-        } 
-        populateTable();
-
-    </script>
+</html>
 </DOCTYPE>
