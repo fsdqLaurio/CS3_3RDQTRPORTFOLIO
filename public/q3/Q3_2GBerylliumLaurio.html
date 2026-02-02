@@ -22,6 +22,9 @@
       <form id="dForm" method="get">
         <fieldset>
           <legend>Your Credentials</legend><br/>
+          <label> Username: 
+            <input onfocus="changeColor(this)" onblur="resetColor(this)" type="text" name="uname" id="uname" required />
+          </label><br/><br/>
           <label> StudentID: 
             <input onfocus="changeColor(this)" onblur="resetColor(this)" type="number" name="studentID" id="studentID" required />
           </label><br/><br/>
@@ -72,9 +75,9 @@
         </fieldset>
         <fieldset>
             <legend>Action Buttons</legend>
-            <button id="submit"> Accept </button>
-            <input type="reset" value=" Clear ">
-            <button id="viewForm" onclick="window.location.href='viewSignUps.html'">View Sign-ups</button>
+            <button type="submit" id="submit">Accept</button>
+            <input type="reset" value="Clear">
+            <button type="button" id="viewForm" onclick="window.location.href='viewSignUps.html'">View Sign-ups</button>
   
           </fieldset> 
           <script src="q3ge2scr.js"></script>

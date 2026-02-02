@@ -8,6 +8,21 @@
             <th></th>
             <td></td>
         </table>
+
+        <section>
+            <h1>List of students who signed up</h1>
+
+             <label>Select your club</label>
+                <select id ="clubFilter" name="clubFilter" >
+                <option value="" disabled selected> All Clubs</option>
+                <option value="scischo">The Science Scholar</option>
+                <option value="lagab">Ang Lagablab</option>
+                <option value="kandili">Kandili</option>
+                <option value="mun">PSHS-MC Model United Nations</option>
+                <option value="ellipsis">Ellipsis</option>
+            </select><br/><br/>
+
+        </section>
     </body>
 
     <script>
@@ -26,6 +41,7 @@
     }
 
         const table = document.querySelector('table');
+        const filter = document.getElementById('clubFilter');
 
         function resetTable(table){
             table.innerHTML = '';
@@ -47,6 +63,9 @@
             // populated table w data
             let accountList = readLocalStorage();
             for(let account in accountList){ // executes each entry (account) in accountList
+                if (filter.value && accountList[account]['cluborg'] !== filter.value) {
+                    continue; // skip account if it doesn't match the filter but only if filter is selected
+                }
                 const row = document.createElement('tr'); // for each account; 
                 for(let entry in accountList[account]){ // for each entry in account
                     const td = document.createElement('td'); 
@@ -57,8 +76,6 @@
             }
         
         } 
-
-
         populateTable();
 
     </script>

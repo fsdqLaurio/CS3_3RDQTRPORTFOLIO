@@ -1,3 +1,5 @@
+let accountList = {}; // Initialize accountList globally
+
 function readLocalStorage(){
   let acctString = localStorage.getItem("accounts");
   if (!acctString) { 
@@ -10,6 +12,9 @@ function readLocalStorage(){
 
     return accountList; 
 }
+
+// Call readLocalStorage on page load
+readLocalStorage();
 
 function writeLocalStorage(form){ 
 
