@@ -122,6 +122,7 @@ body{
     margin-left: 20%;
     background-color: white;
     animation: fadeInUp 2s;
+    transform: translateY(20%);
   }
 
 @keyframes fadeInUp {
